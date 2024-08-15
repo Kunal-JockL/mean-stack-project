@@ -13,12 +13,24 @@ export class MessageItemComponent implements OnInit{
   @Input() message!: Message;
   user: string = 'Alice';
   isYou: boolean = false;
+  time: string = '';
   
   ngOnInit(): void {
    //console.log(this.message);
     if (this.user === this.message.sender){
       this.isYou = true;
     }
+    this.time = this.getTime();
+  }
+
+  getTime(): string {
+    let hour: number = this.message.timestamp.getHours();
+    let min: number = this.message.timestamp.getMinutes();
+
+    const hourStr = hour < 10 ? '0' + hour : hour.toString();
+    const minStr = min < 10 ? '0' + min : min.toString();
+    const timeStr = hourStr + ':' + minStr;
+    return timeStr;
   }
 
 }

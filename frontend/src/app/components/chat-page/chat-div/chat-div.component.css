@@ -1,6 +1,5 @@
 .chat-div {
-    background-color: rgba(0, 140, 255, 0);
-    height: calc(100% - 60px);
+    height: calc(100vh - 60px);
     width: 100%;
 
     display: flex;
@@ -12,10 +11,10 @@
 .chat-board {
     width: 100%;
     padding:0px calc((100% - 900px)/2);
-    height: calc(100% - 60px);
-    background-color: transparent;
+    height: calc(100vh - 130px);
     overflow-x: hidden;
     overflow-y: auto;
+    margin: 0px 5px;
 }
 
 .chat-board-items{
@@ -39,12 +38,12 @@
 
 .chat-board::-webkit-scrollbar-thumb:hover {
     background: #ffffff;
-    /* Color of the scroll thumb on hover */
 }
 
 .chat-input {
-    width: 900px;
+    width: 100%;
+    padding:0px calc((100% - 900px)/2);
     height: 60px;
     position: absolute;
-    top: calc(100% - 60px);
+    top: calc(100% - 70px);
 }
