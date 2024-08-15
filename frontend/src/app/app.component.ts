@@ -2,8 +2,6 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { IntroPageComponent } from './components/intro-page/intro-page.component';
 import { ChatPageComponent } from './components/chat-page/chat-page.component';
-import { library, config } from '@fortawesome/fontawesome-svg-core';
-import { fas } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -15,6 +13,3 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 export class AppComponent {
   title = 'frontend';
 }
-
-library.add(fas);
-config.autoAddCss = false;
